@@ -28,12 +28,11 @@ class SecurityInfo(models.Model):
     threat_types = models.CharField(max_length=200, null=True, blank=True)
     
 class Connection(models.Model):
-    asn = models.Charfield(max_length = 200)
-    isp = models.Charfield(max_length = 500)
+    asn = models.CharField(max_length = 200)
+    isp = models.CharField(max_length = 500)
     
 class TimeZone(models.Model):
-    id = models.Charfield(max_length = 200 )
-    current_time = models.Charfield(max_length = 200 )
+    current_time = models.CharField(max_length = 200 )
     gmt_offset = models.IntegerField()
-    code = models.Charfield(max_length = 200 )
+    code = models.CharField(max_length = 200 )
     is_daylight_saving = models.BooleanField()
